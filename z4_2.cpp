@@ -8,11 +8,14 @@
 int main(){
     int len, a; 
     char str[50]; // Строка
+    char *P;
+
     std:: cin >> str; // Ввод
+    P = str;
     len = strlen(str); // Длина строки
 
     for(int i = 0; i <= len - 1; i++){
-        a = str[i];
+        a = (int)*(P + i);
         if (a == 122){
             a -= 25;
         } else{
